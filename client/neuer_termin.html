@@ -1,0 +1,13 @@
+<head>
+    <title>Daily Flow -  Neuer Termin</title>
+</head>
+<h1 class="title">Neuer Termin erfassen</h1>
+
+	<form class="new" onsubmit="savetermin(event)" data-after="termine.html">
+	<label class="overview">Informationen zu deinem Termin</label><br>
+	<input name="id" hidden><br>
+	<input name="datetime" type="datetime-local"><br>
+	<input name="title" placeholder="Titel"><br>
+	<input name="description" placeholder="Beschreibung"><br>
+	<button type="submit">Speichern</button>
+	</form>

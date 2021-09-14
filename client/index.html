@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+        <link href="css/forms.css" rel="stylesheet">
+        <link href="css/content.css" rel="stylesheet">
+        <link href="css/index.css" rel="stylesheet">
+        <link href="css/auth.css" rel="stylesheet">
+        <script src="javascript/helpers.js"></script>
+        <script src="javascript/postLoad.js"></script>
+        <script src="javascript/navigation.js"></script>
+        <script src="javascript/edit.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon-180x180.png">
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon-32x32.ico">
+        <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    
+    <body>
+        <header>
+
+            <div class="logo">
+                <a href="home.html" class="if-auth">
+                    <img src="img/logo_transparent_background.png" alt="Logo">
+                </a>
+                <a href="welcome.html" class="if-not-auth">
+                    <img src="img/logo_transparent_background.png" alt="Logo">
+                </a>
+            </div>
+            <nav class="topnav" id="main-nav" aria-label="show sections">
+                
+           
+                <div class="myLinks">
+                    <a class="if-auth" href="home.html" >Home</a>
+                    <a class="if-auth" href="notizen.html" class="if-auth">Notizen</a>
+                    <a href="termine.html" class="if-auth">Termine</a>
+                    <a href="geburtstage.html" class="if-auth">Geburtstage</a>
+                    <a href="mein_profil.html" id="navIcon" class="if-auth profile">Mein Profil</a>
+                </div>
+          
+            
+
+           <!----- <nav id="side-nav" class="topnav" aria-label="show profile">
+                <div class="myLinks">
+                <a href="mein_profil.html" id="navIcon" class="if-auth profile">Mein Profil</a>
+            </div> ----->
+             <!-----  <a class="icon" onclick="mobile()">
+                    <i class="fa fa-bars"></i>
+                </a>---->
+
+            </nav>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            
+
+            
+        </header>
+        <div class="content"></div>
+        
+        <script src="javascript/index.js"></script>
+        <script src="javascript/mobileMenu.js"></script>
+
+    </body>
+</html>

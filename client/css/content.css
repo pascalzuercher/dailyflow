@@ -1,0 +1,70 @@
+.displayItems{
+ flex-grow: 1;
+}
+
+div.item{
+    margin-bottom: 2vh;
+    font-family:'Poppins';
+    font-size: 0.5em;
+    font-weight: 400;
+    margin-left: 1vw;
+    margin-right: 2vw;
+    
+    padding: 0.5em;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 10px 8px -5px rgba(0,0,0,0.4);
+    border-radius: 10px;
+}
+
+div.item:hover{
+  background-color: white;
+  opacity: 1;
+  transform: scale(1.015);
+}
+
+div.item.geburtstag, div.item.termin, div.item.notiz{
+  margin-right: 1vw;  
+}
+
+
+.user_div{
+  font-size: 0.65em;
+}
+
+.candle{
+  width: 2vw;
+  height: 2vw;
+  margin: 0 1em 0 1em;
+}
+
+
+@media screen and (max-width: 840px) {
+  
+  div.item{
+    margin-bottom: 2vh;
+    font-family:'Poppins';
+    font-size: 0.3em;
+    font-weight: 400;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    padding: 0.5em;
+    width: 85vw;
+   
+}
+
+.candle{
+  width: 5vw;
+  height: 5vw;
+}
+
+
+
+}
+
+@media screen and (max-width: 320px) {
+
+  div.item{
+    width: 80vw;
+  }
+  
+}

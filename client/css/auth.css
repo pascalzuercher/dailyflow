@@ -1,0 +1,11 @@
+.if-auth {
+	display: none;
+}
+
+.auth .if-auth {
+	display: inline-block;
+}
+
+.auth .if-not-auth {
+	display: none;
+}

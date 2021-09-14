@@ -1,0 +1,490 @@
+/* ----- GENERAL ----- */
+html, body { 
+    font-family: 'Poppins';
+    text-align: center; 
+    margin: 0; 
+    padding: 0;
+    height: 100%; 
+    width: 100%;
+    background-color: #021C31;
+    overflow: auto;
+    text-decoration: none;  
+    
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  
+a, img, .signin, .button, div.item, button.löschen, button.bearbeiten, button.bearbeiten_user, .account { transition: all 200ms; -webkit-transition: all 200ms; -moz-transition: all 200ms; -o-transition: all 200ms;}
+
+.button {
+    background-image: url("../img/plus2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 100%;
+    width: 7vh;
+    height: 7vh;
+    border: none;
+    box-shadow: 0px 12px 10px -5px rgba(0,0,0,0.71); 
+    top: 89vh;
+    right: 3.5vw;
+    position: fixed;
+    
+}
+div.content{
+    min-height: 92vh;
+}
+
+button.account{
+    top: 89vh;
+    right: 6vw;
+    position: fixed;
+    box-shadow: 0px 12px 10px -5px rgba(0,0,0,0.71); 
+    border-radius: 10px;
+    font-size: 0.35em;
+    font-family: 'Poppins';
+    background-color: #021C31;
+    color: #FFFFFF;
+    width: 13vw;
+    height: 6vh;
+    border: none;
+}
+
+button.account#delete_account{
+    top: 81vh;
+}
+
+.bearbeiten{
+    background-image: url("../img/edit.png");
+    width: 2vw;
+    height: 2vw;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    margin-right: 0.5em;
+    margin-top: 1em;
+}
+
+.löschen{
+    background-image: url("../img/delete.png");
+    width: 2vw;
+    height: 2vw;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    margin-right: 0.5em;
+    margin-top: 1em;
+}
+
+button.bearbeiten:hover, button.löschen:hover{
+    transform: scale(1.15);
+}
+
+.account:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+/* ----- HEADER ----- */
+
+header {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    box-shadow: 0 2.25px rgba(0, 0, 0, 0.1);
+    background-color: rgb(255, 255, 255);
+}
+
+.logo {
+    width: 20%;
+}
+
+.logo img {
+    height: 4.5em;
+    margin: auto;
+
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* ----- Navigation ----- */
+
+nav {
+    width: 80%;
+    margin-left: 0;
+    margin-right: 0;
+    
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.075em;
+    margin-right: 1em;
+    margin-top: 0.8em;
+    margin-left: 1em;
+    color: #021C31;
+    padding: 0.5em 0.5em;
+    border-radius: 5px;
+
+}
+
+nav a:hover{
+   background-color:#021C31;
+   color: white;
+}
+
+nav a:first-child{
+    margin-left: 13.5vw;
+}
+
+#navIcon{
+    margin-left: 17vw;
+}
+
+#main-nav {text-align: left; display: block;}
+
+/* ----- BODY ----- */
+
+.registertitle {
+    margin: 12vh auto 0 auto; 
+    text-align: center;
+    width: 35vw;
+    font-size: 2em;
+    color: #021C31;
+    font-weight: 300;
+    padding: 2rem;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 12px 10px -5px rgba(0,0,0,0.71);  
+    
+}
+
+.slogan {
+    font-size: 6.5vmin;
+    text-align: center;
+    color: white;
+    margin: 10rem 6% 0.75em 6%;
+    font-weight: 400;
+}
+
+#or {
+    font-family: 'Poppins';
+    font-weight: 400;
+    color: white;
+    font-size: 1.75em;  
+}
+
+.signin {
+    font-family: 'Poppins';
+    font-size: 1.5em;
+    color: #021C31;
+    padding: 0.5% 0.5% 0.5% 0.5%;
+    margin-top: 8vh;
+    background-color: #FFFFFF;
+    font-weight: 400;
+    border-radius: 10px;
+    box-shadow: 0px 12px 10px -5px rgba(0,0,0,0.71);
+    min-width: 15%;
+    border: none;
+}
+
+.signin:hover{
+    transform: scale(1.05);
+}
+
+#registrieren, #or, #login {
+    width: 10em;
+    margin: 0.75em auto;
+}
+
+.title {
+	margin: auto;
+	width: 92vw;
+	font-family: 'Poppins';
+	font-size: 1.75em;
+	text-align: left;
+	color: white;
+	padding: 1.75rem;
+	margin-top: 7rem;
+	background-color: #2a4963;
+	font-weight: 400;
+	border-radius: 15px;
+	box-shadow: 0px 12px 10px -5px rgba(0,0,0,0.71); 
+	}
+	
+.content_div {
+    text-align: left;
+    display: flex;
+	margin: 1% auto auto auto;
+	width: 92vw;
+    min-height: 84vh;
+    height: auto;
+    font-family: 'Poppins';
+	font-size: 3em;
+	color: black;
+	padding: 1.75rem;
+	background-color: rgba(255, 255, 255, 0.479);
+	font-weight: 300;
+	border-radius: 15px;
+	box-shadow: 0px 12px 10px -5px rgba(0,0,0,0.71); 
+	}
+
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+    transition: all 0.3s ease;
+    }
+
+.burger{
+    margin-right: 1em;
+    margin-top: 2vh; 
+    display: none;
+    }
+ 
+   
+@media screen and (min-width: 1440px) {
+
+
+    button.account{
+        top: 82vh;
+        }
+
+    button.account#delete_account{
+        top: 73vh;
+        }   
+
+}
+
+@media screen and (max-width: 1180px) {
+    
+
+    button.account{
+        width: 14vw;
+        height: 6.5vh;
+        font-size: 0.25em;
+        top: 87vh;
+        }
+
+    button.account#delete_account{
+    top: 78vh;
+    }
+
+    nav a{
+        font-size: 0.9em;
+        margin-right: 0.75em;
+        margin-top: 0.8em;
+        margin-left: 0.75em;
+        color: #021C31;
+        
+        }
+
+    nav a:first-child{
+      margin-left: 13.5vw;
+    }
+
+    #navIcon{
+        margin-left: 15vw;
+    }
+    
+
+    .logo img{
+        height: 3em;
+        margin-top: 0.4em;
+    }
+
+    .title{
+        margin-top: 1rem;
+        width: 90vw;
+        padding: 1.25rem;
+    }
+
+    .content_div{
+        width: 90vw;
+        padding: 1.25rem;
+    }
+
+    .title{
+        margin-top: 5rem;
+    }
+}
+
+
+
+
+@media screen and (max-width: 840px) {
+
+    div.logo{
+        width: 50%;
+    }
+
+    .logo img{
+        width: auto;
+        margin: 0 1em;
+      
+    }
+
+    header{
+        height: 8vh;
+    }
+   
+    header a{ 
+        display: block;
+    }
+    
+   
+
+    nav a:first-child{
+        margin-left: 0.75em;
+        margin-top: 3em;
+        
+    }
+
+    nav a:last-child{
+        margin-bottom: 1em;
+    }
+
+
+    .title{
+        width: 100%;
+        border-radius: 0%;
+        font-size: 1.25em;
+        margin-top: 8vh;
+      }
+
+      .content_div{
+        width: 100vw;
+        padding: 1.25rem;
+        border-radius: 0%;
+        margin-top: 0;
+        min-height: 84vh;
+        height: auto;
+        display: block;
+    }
+
+   .registertitle{
+       width: 100%;
+       background-color: #2a4963;
+       border-radius: 0;
+       margin-top: 3.35em;
+       color: white;
+       padding: 2rem 0rem;
+       margin-top: 8vh;
+    
+
+   }
+
+   .myLinks{
+       position: absolute;
+       right: 0px;
+       height: 92vh;
+       top: 8vh;
+       background-color:#021C31; 
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       width: 60%;
+       transform: translateX(100%);
+       transition: transform 0.5s ease-in;
+       
+   }
+
+   div.myLinks a{
+       color: white;
+       margin: 1.5em 0.75em;
+   }
+
+   div.myLinks a:hover{
+        background-color: white;
+        color: #021C31;
+   }
+
+   .burger{
+       display: block;
+   }
+
+   body{
+       overflow-x: hidden;
+   }
+
+   .burger{
+       display: block;
+       cursor: pointer;
+   }
+
+   #navIcon{
+       align-items: center;
+       margin: 1.5em 0.75em;
+   }
+
+   button.account{
+       width: 40vw;
+       height: 8vh;
+       right: 30vw;
+   }
+
+   button.account#delete_account{
+       top: 76vh;
+   }
+
+   .bearbeiten{
+        width: 6vw;
+        height: 6vw;
+   }
+
+   .löschen{
+        width: 6vw;
+        height: 6vw;
+   }
+}
+
+@media screen and (max-width: 320px) {
+
+    .title{
+        font-size: 1em;
+    }
+
+    .overview_title{
+        font-size: 0.3em;
+    }
+    
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+

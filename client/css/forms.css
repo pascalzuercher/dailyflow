@@ -1,0 +1,273 @@
+form {
+    width: 35vw;
+    background-color: #FFFFFF;
+    padding :2rem;;
+    text-align: center;
+    font-weight: 300;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 12px 10px -5px rgba(0,0,0,0.71);
+    margin: 1% auto;
+    height: 38vh; 
+}
+
+form#signin {
+    height: 19vh;
+    
+}
+
+div#ovDiv{
+    width: 96vw;
+    margin: auto;
+}
+
+form.new {
+    height: 40vh;
+}
+
+form.overview {
+    height: 43vh;
+    width: 43vw;
+    
+}
+
+form#ovGeburtstag{
+    float: right;
+}
+
+form#ovTermin{
+    float: left;
+}
+
+form#notes{
+    height: 47vh;
+}
+
+form input {
+    background-color: rgba(219, 216, 216, 0.616);
+    font-weight: 300;
+    border-radius: 10px;
+    border: none;
+    font-size: 1em;
+    margin-top: 1em;
+    padding: 3%;
+    width: 80%;
+}
+
+form input:focus {
+    background-color: #FFFFFF;
+}
+
+form button {
+    background-color:#021C31;
+    font-weight: 400;
+    font-size: 1.2em;
+    color: #FFFFFF;
+    padding: 3%;
+    box-shadow: 0px 12px 10px -5px rgba(0,0,0,0.71);
+    border-radius: 10px;
+    transition: all 200ms;
+    margin-top: 1.5em;
+    border: none;
+    
+}
+
+form button:hover {
+    transform: scale(1.05);
+}
+
+form#signin button {
+    margin-top: 0.25em;
+}
+
+form.new button {
+    margin-top: 14px;
+}
+
+.textarea {
+    background-color: rgba(219, 216, 216, 0.616);
+    font-weight: 300;
+    border-radius: 10px;
+    border: none;
+    font-size: 1em;
+    margin-top: 1em;
+    padding: 3%;
+    width: 33vw;
+    height: 25vh; 
+}
+
+#password_forget {
+    font-family: 'Poppins';
+    background-color: white;
+    color: #021C31;
+    font-weight: 300;
+    border: none;
+    font-size: 85%;  
+    display: block;
+    margin: auto;
+    padding: 0;
+    box-shadow: none;
+    width: 20vw;
+    
+    }
+
+    form label{
+        font-size: 1.25em;
+        font-weight: 400;
+    }
+
+    @media screen and (min-width: 1440px) {
+        form#signin {
+            height: 28vh;
+        }
+
+        form#register {
+            height: 47vh;
+        }
+    }
+
+    @media screen and (max-width: 1180px) {
+        form#signin {
+            height: 32vh;
+        }
+
+        form#register {
+            height: 51vh;
+        }
+
+        form.overview {
+            height: 43vh;
+            width: 40.75vw;
+            
+        }
+
+        
+        div#ovDiv{
+            width: 93.5vw;
+            margin: auto;
+}
+
+form#notes{
+    height: 48vh;
+}
+
+form.new{
+    height: 42vh;
+}
+    }
+
+    @media screen and (max-width: 840px) {
+
+      form{
+          width: 100%;
+      }
+
+      form.new{
+          padding: 2rem 0;
+          min-height: 76vh;
+          height: auto;
+          border-radius: 0px;
+          margin-top: 0;
+      }
+
+        form#register{
+            height: 70.2vh;
+            width: 100%;
+            padding: 0;
+            border-radius: 0%;
+            font-size: 1.25em;
+            margin-top: 0;
+            
+        }
+
+        form#register input{
+            width: 70%;
+    
+        }
+
+        form#register input:first-child {
+            margin-top: 1.5em;
+        }
+
+        form#signin {
+
+            font-size: 1.25em;
+            color: #021C31;
+            padding: 0;
+            margin-top: 0;
+            min-height: 79vh;
+            height: auto;
+            border-radius: 0;  
+            width: 100%;
+         
+           
+        }
+        
+        form#signin input:first-child {
+            margin-top: 3em;
+        }
+        
+        form#signin input {
+            width: 70%;
+        }
+
+        div#ovDiv{
+            width: 100vw;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+    
+        form.overview{
+            width: 100vw;
+            margin-top: 0;
+            border-radius: 0px;
+            padding: 1rem 0; 
+            height: 38vh;
+            font-size: 1em;
+        }
+
+        form.overview input{
+            font-size: 0.8em;
+        }
+
+        form.overview button{
+            margin-top: 1em;
+            margin-bottom: 0;
+        }
+
+        form.overview label{
+            font-size: 1em;
+        }
+
+        .textarea{
+            width: 80%;
+            border-radius: 5px;
+        }
+
+        #password_forget{
+            width: 60vw;
+        }
+
+        
+    }
+
+    @media screen and (max-width: 600px){
+        form#register{
+            height: 80vh;
+        }
+    }
+
+    @media  screen and (max-width: 320px) {
+        form.overview{
+            font-size: 0.75em;
+            height: 34.5vh;
+        }
+
+        form.overview input{
+            font-size: 0.8em;
+            }
+        
+        
+    }
