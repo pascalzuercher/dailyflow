@@ -1,0 +1,24 @@
+{
+  "name": "dailyflow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/myserver.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "darkmode-js": "^1.5.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pascalzuercher/dailyflow"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "keywords": [],
+  "author": "pascal",
+  "license": "ISC"
+}
