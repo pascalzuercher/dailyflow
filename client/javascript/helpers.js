@@ -1,4 +1,4 @@
-const BASEURL = process.env.PORT ? "https://desolate-chamber-59847.herokuapp.com/" : "http://localhost:8080/"
+const BASEURL = location.href.includes("localhost") ? "http://localhost:8080/" : "https://desolate-chamber-59847.herokuapp.com/" 
 
 async function postData(url, data) {
 	console.log(data);
