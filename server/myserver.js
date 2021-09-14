@@ -7,6 +7,9 @@ const { servestatic } = require('./servestatic');
 http.createServer(answer).listen(8080);
 console.log("Server listening on port http://localhost:8080")
 
+
+//Todo: verify user
+
 async function answer(req, res) {
 
 	//API
