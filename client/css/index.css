@@ -436,11 +436,11 @@ nav a:first-child{
        width: 40vw;
        height: 8vh;
        right: 30vw;
-       top: 74vh;
+       top: 72.5vh;
    }
 
    button.account#delete_account{
-       top: 65vh;
+       top: 60vh;
    }
 
 
