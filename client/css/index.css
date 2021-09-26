@@ -326,7 +326,7 @@ nav a:first-child{
 @media screen and (max-width: 840px) {
 
     .button{
-        top: 60vh;
+        top: 75vh;
     }
 
     div.logo{
