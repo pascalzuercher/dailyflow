@@ -32,8 +32,8 @@ div.item.geburtstag, div.item.termin, div.item.notiz{
 }
 
 .candle{
-  width: 2vw;
-  height: 2vw;
+  width: 1em;
+  height: 1em;
   margin: 0 1em 0 1em;
 }
 
@@ -52,8 +52,8 @@ div.item.geburtstag, div.item.termin, div.item.notiz{
 }
 
 .candle{
-  width: 5vw;
-  height: 5vw;
+  width: 1em;
+  height: 1em;
 }
 
 
