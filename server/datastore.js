@@ -2,6 +2,9 @@ const fs = require('fs').promises
 const {existsSync} = require('fs')
 const path = require('path')
 
+
+const basepath = path.join(dirname, "data")
+
 async function createDirIfNotExists(dirname) {
 	return fs.mkdir(dirname, {recursive: true}).catch(e => {
 		if(e.code !== 'EEXIST') {throw e}
@@ -9,12 +12,12 @@ async function createDirIfNotExists(dirname) {
 }
 
 function doesItemExist(filepath) {
-	filepath = path.join("data", filepath)
+	filepath = path.join(basepath, filepath)
 	return existsSync(filepath)
 }
 
 async function save(filepath, jsondata) {
-	filepath = path.join("data", filepath)
+	filepath = path.join(basepath, filepath)
 	if(!path.extname(filepath)) {
 		filepath = filepath + ".json"
 	}
@@ -24,7 +27,7 @@ async function save(filepath, jsondata) {
 }
 
 async function load(filepath) {
-	filepath = path.join("data", filepath)
+	filepath = path.join(basepath, filepath)
 	const stat = await fs.stat(filepath)
 	if(stat.isDirectory()) {
 		return await fs.readdir(filepath)
@@ -34,7 +37,7 @@ async function load(filepath) {
 }
 
 async function remove(filepath) {
-	filepath = path.join("data", filepath)
+	filepath = path.join(basepath, filepath)
 	const stat = await fs.stat(filepath)
 	if(stat.isDirectory()) {
 		await fs.rmdir(filepath, { recursive: true });
