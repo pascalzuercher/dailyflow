@@ -1,5 +1,3 @@
-// const fs = require('fs').promises
-// const {pbkdf2Sync} = require('crypto');
 const {parseJsonBody} = require("./parsers")
 const {respondWithJson} = require("./responders")
 const {load, save, doesItemExist, remove} = require("./datastore");
@@ -8,8 +6,14 @@ const bcrypt = require('bcryptjs');
 
 
 
-// const key = pbkdf2Sync('secret', 'salt', 100000, 64, 'sha512');
-// console.log(key.toString('hex'));  // '3745e48...08d59ae'
+async function createToken (user) {
+	const token = String(Math.round(Math.random() * 1e15))
+	await save(`${user}/token.json`, {token, date: Date.now()})
+	return token
+}
+
+
+
 
 async function signUp(req, res) {
 	const {nachname, vorname, user, email, pw} = await parseJsonBody(req)
@@ -25,12 +29,14 @@ async function signUp(req, res) {
 	
 	const hash = await bcrypt.hash(saltedpassword, 10)
 	
-	console.log('Your hash: ', hash);
-		
 	await save(`${user}/userdata.json`, {user, hash, email, nachname, vorname})
-	respondWithJson(res, {ok: true, data: {user, email, vorname, nachname}})
+	const token = await createToken(user)
+	respondWithJson(res, {ok: true, data: {user, email, vorname, nachname, token}})
 
 }
+
+
+
 
 async function signIn(req, res) {
 	const {user, pw} = await parseJsonBody(req)
@@ -39,27 +45,47 @@ async function signIn(req, res) {
 	saltedpassword = pw  + "jgf75rg67d54dh5zrfuztg6rdtw4sv4t5dhfntuzho9kkhunutfg65df6";
 	const passwordsMatch = await bcrypt.compare(saltedpassword, hash)
 	console.log({ok: passwordsMatch, data: {email, user, vorname, nachname}});
-	respondWithJson(res, {ok: passwordsMatch, data: {email, user, vorname, nachname}})
+	const token = await createToken(user)
+	respondWithJson(res, {ok: passwordsMatch, data: {email, user, vorname, nachname, token}})
+}
+
+async function verifyToken(user, token) {
+	const saved = await load(`${user}/token.json`)
+	console.log(saved.token == token);
+	return saved.token == token
 }
 
 async function saveData(req, res) {
-	const {path, data} = await parseJsonBody(req)
+	const {path, data, user, token} = await parseJsonBody(req)
+	if(!await verifyToken(user, token)) 	return respondWithJson(res, {ok: false, info: "TokenMismatch"})
 	await save(path, data)
 	respondWithJson(res, {ok: true})
 }
 
+
+
+
 async function loadData(req, res) {
-	const {path} = await parseJsonBody(req)
+	const {path, user, token} = await parseJsonBody(req)
+	if(!await verifyToken(user, token)) 	return respondWithJson(res, {ok: false, info: "TokenMismatch"})
 	respondWithJson(res, await load(path))
 }
 
+
+
+
 async function deleteItem(req, res) {
-	const {path} = await parseJsonBody(req)
+	const {path, user, token} = await parseJsonBody(req)
+	if(!await verifyToken(user,token)) 	return respondWithJson(res, {ok: false, info: "TokenMismatch"})
 	respondWithJson(res, await remove(path))
 }
 
+
+
+
 async function loadAll(req, res) {
-	const {path} = await parseJsonBody(req)
+	const {path, user, token} = await parseJsonBody(req)
+	if(!await verifyToken(user, token)) 	return respondWithJson(res, {ok: false, info: "TokenMismatch"})
 	try {
 		const files = await load(path)
 		const items = []

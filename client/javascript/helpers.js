@@ -1,4 +1,12 @@
-const BASEURL = location.href.includes("localhost") ? "http://localhost:8080/" : "https://desolate-chamber-59847.herokuapp.com/" 
+const BASEURL = location.href.match(/(localhost|127)/) ? "http://localhost:8080/" : "https://desolate-chamber-59847.herokuapp.com/" 
+console.log(BASEURL);
+
+async function postDataWithToken (url, data) {
+	const dataWithToken = data
+	dataWithToken.user = window.datastore.user
+	dataWithToken.token = window.datastore.token
+	return postData(url, dataWithToken)
+}
 
 async function postData(url, data) {
 	console.log(data);
@@ -15,6 +23,9 @@ async function postData(url, data) {
 	return response.json(); // parses JSON response into native JavaScript objects
 }
 
+
+
+
 function collectFormData(formElement) {
 	var data = {}
 	formElement.querySelectorAll("input, textarea").forEach(input=>{
@@ -23,18 +34,27 @@ function collectFormData(formElement) {
 	return data
 }
 
+
+
+
 function checkFormResponse(response) {
 	console.log(response);
 	if(response.ok) {
 		Object.assign(window.datastore, response.data)
 		localStorage.dailyflowdata = JSON.stringify(window.datastore)
 		return true
+
 	}
 	else {
-		form.innerHTML += `<div>${response.info || "Unbekannter Fehler"}</div>`
+		console.log(response);
+		if(response.info == "TokenMismatch") logout()
 		return false
 	}
 }
+
+
+
+
 
 function beautifyDate(datetime) {
 	var date = new Date(datetime)
@@ -51,6 +71,10 @@ function beautifyDate(datetime) {
 	var datum = date.toLocaleDateString()
 	return weekday + ", " +  datum
 }
+
+
+
+
 
 function beautifyDateTime(datetime) {
 	var date = new Date(datetime)

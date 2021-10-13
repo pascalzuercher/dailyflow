@@ -17,7 +17,7 @@ async function displayItems() {
     for(var itemsElement of itemsElements) {
         var category = itemsElement.dataset.what
         var {user} = window.datastore
-        var items = await postData("loadAll", {path: user+"/"+category})
+        var items = await postDataWithToken("loadAll", {path: user+"/"+category})
         var next = itemsElement.dataset.next
         if(next) {
             items = pickItems(items, next, category)
@@ -59,7 +59,7 @@ async function checkAutoRemove(category, item) {
     const diff =  msToday - msItem
     console.log(category);
     if(diff > 2629800000 ){
-        await postData("deleteItem", {path: window.datastore.user+"/"+category+"/"+id})
+        await postDataWithToken("deleteItem", {path: window.datastore.user+"/"+category+"/"+id})
         
     } 
 }

@@ -4,6 +4,9 @@ document.querySelectorAll("a").forEach(link=>link.addEventListener("click", (eve
 	event.preventDefault()
 }))
 
+
+
+
 function init() {
     window.datastore = JSON.parse(localStorage.dailyflowdata || "{}")
     login()
@@ -13,16 +16,24 @@ function init() {
 
 init()
 
+
+
+
 function signUp(event) {
 	event.preventDefault()
     signUpOrSignIn(event.target, "signUp")
 }
 
 
+
+
 function signIn(event) {
 	event.preventDefault()
     signUpOrSignIn(event.target, "signIn")
 }
+
+
+
 
 async function signUpOrSignIn(formElement, action) {
     var data = collectFormData(formElement)
@@ -36,6 +47,8 @@ async function signUpOrSignIn(formElement, action) {
 }
 
 
+
+
 function login() {
     if(window.datastore.user) {
         var {user, vorname, nachname} = window.datastore
@@ -44,13 +57,12 @@ function login() {
     }
 }
 
+
+
+
 function sign(event) {
     postForm(event).then(login)
 }
-
-
-
-
 
 
 
@@ -60,26 +72,42 @@ function logout(){
     location.reload();
 }
 
+
+
+
+
 function savebirthday(event) {
 	event.preventDefault()
     saveItem(event.target, "geburtstage", "geburtstage.html")
 }
+
+
+
+
 
 function savenotizen(event) {
 	event.preventDefault()
     saveItem(event.target, "notizen", "notizen.html")
 }
 
+
+
+
+
 function savetermin(event) {
 	event.preventDefault()
     saveItem(event.target, "termine", "termine.html")
 }
 
+
+
+
+
 async function saveItem(formElement, category, redirect) {
     var data = collectFormData(formElement)
     var timestamp = data.id || (Date.now() + ".json")
     var path = `${window.datastore.user}/${category}/${timestamp}`
-    var response = await postData("saveData", {path, data})
+    var response = await postDataWithToken("saveData", {path, data})
     var ok = checkFormResponse(response)
     if(ok) {
         load(redirect)

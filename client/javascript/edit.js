@@ -10,7 +10,7 @@ var category = {
 async function edit(type, id) {
     console.log(id);
     await load(`neuer_${type}.html`)
-    var item = await postData("loadData", {path: window.datastore.user+"/"+category[type]+"/"+id})
+    var item = await postDataWithToken("loadData", {path: window.datastore.user+"/"+category[type]+"/"+id})
     console.log(item);
     document.querySelector('input[name="id"]').value = id
     if(type === "termin"){
@@ -31,7 +31,7 @@ async function edit(type, id) {
 
 async function remove(type, id) {
     console.log(id);
-    await postData("deleteItem", {path: window.datastore.user+"/"+category[type]+"/"+id})
+    await postDataWithToken("deleteItem", {path: window.datastore.user+"/"+category[type]+"/"+id})
     location.reload()
 }
 
@@ -39,7 +39,7 @@ async function remove(type, id) {
 
 async function deleteAccount(){
         if(window.confirm("Willst du dein Konto wirklich löschen? - Deine Daten werden dabei endgültig gelöscht und können nicht wiederhergestellt werden")){
-            await postData("deleteItem", {path: window.datastore.user})
+            await postDataWithToken("deleteItem", {path: window.datastore.user})
             localStorage.removeItem("dailyflowdata")
             window.assign("#welocme.html")
             

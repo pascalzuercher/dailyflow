@@ -22,7 +22,7 @@ async function answer(req, res) {
 	if(req.url == "/loadAll") 	{return loadAll(req, res)}
 	if(req.url == "/deleteItem") 	{return deleteItem(req, res)}
 
-	//load Static Files (todo)
+
 	return servestatic(req, res)
 
 }
