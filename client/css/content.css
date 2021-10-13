@@ -48,8 +48,7 @@ div.item.geburtstag, div.item.termin, div.item.notiz{
     margin-left: 1vw;
     margin-right: 1vw;
     padding: 0.5em;
-    width: 85vw;
-   
+    
 }
 
 .candle{
@@ -59,12 +58,4 @@ div.item.geburtstag, div.item.termin, div.item.notiz{
 
 
 
-}
-
-@media screen and (max-width: 320px) {
-
-  div.item{
-    width: 80vw;
-  }
-  
 }
