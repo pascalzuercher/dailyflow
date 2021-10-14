@@ -22,7 +22,7 @@ async function displayItems() {
         if(next) {
             items = pickItems(items, next, category)
         }
-        console.log(items);
+
         for(var item of items) {
             checkAutoRemove(category, item)
             itemsElement.innerHTML += displayItem(item, category)
