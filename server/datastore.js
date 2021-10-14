@@ -3,7 +3,7 @@ const {existsSync} = require('fs')
 const path = require('path')
 
 
-const basepath = path.join(dirname, "data")
+const basepath = path.join(__dirname, "data")
 
 async function createDirIfNotExists(dirname) {
 	return fs.mkdir(dirname, {recursive: true}).catch(e => {
