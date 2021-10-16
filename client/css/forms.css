@@ -8,13 +8,14 @@ form {
     border: none;
     box-shadow: 0px 12px 10px -5px rgba(0,0,0,0.71);
     margin: 1% auto;
-    height: 38vh; 
+    height: 40vh; 
 }
 
 form#signin {
-    height: 19vh;
+    height: 22vh;
     
 }
+
 
 div#ovDiv{
     width: 96vw;
@@ -22,25 +23,29 @@ div#ovDiv{
 }
 
 form.new {
-    height: 40vh;
+    height: 44vh;
+    width: 40vw
 }
 
 form.overview {
-    height: 43vh;
-    width: 43vw;
+    height: 47vh;
+    width: 45vw;
     
 }
 
 form#ovGeburtstag{
     float: right;
+    margin-right: 2vw;
 }
 
 form#ovTermin{
     float: left;
+    margin-left: 2vw;
 }
 
 form#notes{
-    height: 47vh;
+    height: 48vh;
+    width: 45vw;
 }
 
 form input {
@@ -118,17 +123,17 @@ form.new button {
 
     @media screen and (min-width: 1440px) {
         form#signin {
-            height: 28vh;
+            height: 34vh;
         }
 
         form#register {
-            height: 47vh;
+            height: 52vh;
         }
     }
 
     @media screen and (max-width: 1180px) {
         form#signin {
-            height: 32vh;
+            height: 35vh;
         }
 
         form#register {
@@ -137,7 +142,7 @@ form.new button {
 
         form.overview {
             height: 43vh;
-            width: 40.75vw;
+            width: 43vw;
             
         }
 
@@ -146,28 +151,38 @@ form.new button {
             width: 93.5vw;
             margin: auto;
 }
+    .textarea{
+        width: 100%;
+    }
 
-form#notes{
-    height: 48vh;
-}
+        form#notes{
+        height: 50vh;
+        width: 60vw;
+        }
 
-form.new{
-    height: 42vh;
-}
+        form.new{
+        height: 48vh;
+        }
     }
 
     @media screen and (max-width: 840px) {
 
       form{
-          width: 100%;
+          width: 100vw;
+    
       }
 
       form.new{
           padding: 2rem 0;
-          min-height: 76vh;
+          min-height: 80vh;
+          width: 100vw;
           height: auto;
           border-radius: 0px;
           margin-top: 0;
+      }
+
+      form#notes.new{
+          width: 100%;
       }
 
         form#register{
@@ -224,9 +239,16 @@ form.new{
             margin-top: 0;
             border-radius: 0px;
             padding: 1rem 0; 
-            height: 38vh;
+            height: 45vh;
             font-size: 1em;
+            
         }
+
+        form#ovTermin, form#ovGeburtstag{
+            margin: 0 0 0.25em 0;
+        }
+
+     
 
         form.overview input{
             font-size: 0.8em;

@@ -40,6 +40,7 @@ a, img, .signin, .button, div.item, button.löschen, button.bearbeiten, button.b
     position: fixed;
     
 }
+
 div.content{
     min-height: 92vh;
 }
@@ -87,7 +88,7 @@ button.account#delete_account{
     margin-top: 1em;
 }
 
-button.bearbeiten:hover, button.löschen:hover{
+button.bearbeiten:hover, button.löschen:hover, .button:hover{
     transform: scale(1.15);
 }
 
@@ -276,9 +277,17 @@ nav a:first-child{
         right: 10em;
     }
 
+    nav a:first-child{
+        margin-left: 15vw;
+    }
+
 }
 
 @media screen and (max-width: 1180px) {
+
+    .button{
+        top: 85vh;
+    }
     
 
     button.account{
@@ -337,7 +346,7 @@ nav a:first-child{
 @media screen and (max-width: 840px) {
 
     .button{
-        top: 80vh;
+        top: 78vh;
         right: 2em;
     }
 
@@ -476,6 +485,10 @@ nav a:first-child{
 
     .overview_title{
         font-size: 0.3em;
+    }
+
+    .button{
+        top: 75vh;
     }
     
 }
