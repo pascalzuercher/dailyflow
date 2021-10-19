@@ -216,13 +216,13 @@ nav a:first-child{
 
 .title {
 	margin: auto;
-	width: 92vw;
+	width: 96vw;
 	font-family: 'Poppins';
 	font-size: 1.75em;
 	text-align: left;
 	color: white;
 	padding: 1.75rem;
-	margin-top: 7rem;
+	margin-top: 6.25rem;
 	background-color: #2a4963;
 	font-weight: 400;
 	border-radius: 15px;
@@ -233,7 +233,7 @@ nav a:first-child{
     text-align: left;
     display: flex;
 	margin: 1% auto auto auto;
-	width: 92vw;
+	width: 96vw;
     min-height: 84vh;
     height: auto;
     font-family: 'Poppins';
@@ -326,12 +326,10 @@ nav a:first-child{
 
     .title{
         margin-top: 1rem;
-        width: 90vw;
         padding: 1.25rem;
     }
 
     .content_div{
-        width: 90vw;
         padding: 1.25rem;
     }
 
