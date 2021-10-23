@@ -56,7 +56,7 @@ async function checkAutoRemove(category, item) {
     const msToday = lastMidnight.getTime()
     const msItem = d.getTime()
     const diff =  msToday - msItem
-    console.log(category);
+
     if(diff > 2629800000 ){
         await postDataWithToken("deleteItem", {path: window.datastore.user+"/"+category+"/"+id})
     } 

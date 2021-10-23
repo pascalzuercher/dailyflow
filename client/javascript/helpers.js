@@ -1,5 +1,4 @@
 const BASEURL = location.href.match(/(localhost|127)/) ? "http://localhost:8080/" : "https://desolate-chamber-59847.herokuapp.com/" 
-console.log(BASEURL);
 
 async function postDataWithToken (url, data) {
 	const dataWithToken = data

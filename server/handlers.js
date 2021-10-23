@@ -40,7 +40,6 @@ async function signIn(req, res) {
 
 async function verifyToken(user, token) {
 	const saved = await load(`${user}/token.json`)
-	console.log(saved.token == token);
 	return saved.token == token
 }
 
