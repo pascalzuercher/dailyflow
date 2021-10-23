@@ -11,20 +11,16 @@ async function postDataWithToken (url, data) {
 async function postData(url, data) {
 	console.log(data);
 	const response = await fetch(BASEURL + url, {
-		method: 'POST', // *GET, POST, PUT, DELETE, etc.
-		mode: 'cors', // no-cors, *cors, same-origin
-		//credentials: 'same-origin', // include, *same-origin, omit
+		method: 'POST',
+		mode: 'cors',
 		headers: {
 			'Content-Type': 'application/x-www-form-urlencoded'
 		},
-		referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-		body: JSON.stringify(data) // body data type must match "Content-Type" header
+		referrerPolicy: 'no-referrer',
+		body: JSON.stringify(data)
 	});
-	return response.json(); // parses JSON response into native JavaScript objects
+	return response.json();
 }
-
-
-
 
 function collectFormData(formElement) {
 	var data = {}
@@ -33,9 +29,6 @@ function collectFormData(formElement) {
 	})
 	return data
 }
-
-
-
 
 function checkFormResponse(response) {
 	console.log(response);
@@ -58,7 +51,6 @@ function checkFormResponse(response) {
 
 function beautifyDate(datetime) {
 	var date = new Date(datetime)
-	
 	var day = date.getDay()
 	var hours = date.getHours()
 	var minutes = String(date.getMinutes()).padStart(2, "0")
@@ -72,13 +64,8 @@ function beautifyDate(datetime) {
 	return weekday + ", " +  datum
 }
 
-
-
-
-
 function beautifyDateTime(datetime) {
 	var date = new Date(datetime)
-	
 	var day = date.getDay()
 	var hours = date.getHours()
 	var minutes = String(date.getMinutes()).padStart(2, "0")

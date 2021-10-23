@@ -4,9 +4,6 @@ document.querySelectorAll("a").forEach(link=>link.addEventListener("click", (eve
 	event.preventDefault()
 }))
 
-
-
-
 function init() {
     window.datastore = JSON.parse(localStorage.dailyflowdata || "{}")
     login()
@@ -16,24 +13,15 @@ function init() {
 
 init()
 
-
-
-
 function signUp(event) {
 	event.preventDefault()
     signUpOrSignIn(event.target, "signUp")
 }
 
-
-
-
 function signIn(event) {
 	event.preventDefault()
     signUpOrSignIn(event.target, "signIn")
 }
-
-
-
 
 async function signUpOrSignIn(formElement, action) {
     var data = collectFormData(formElement)
@@ -46,9 +34,6 @@ async function signUpOrSignIn(formElement, action) {
     }
 }
 
-
-
-
 function login() {
     if(window.datastore.user) {
         var {user, vorname, nachname} = window.datastore
@@ -57,14 +42,9 @@ function login() {
     }
 }
 
-
-
-
 function sign(event) {
     postForm(event).then(login)
 }
-
-
 
 function logout(){
     localStorage.removeItem("dailyflowdata")
@@ -72,36 +52,20 @@ function logout(){
     location.reload();
 }
 
-
-
-
-
 function savebirthday(event) {
 	event.preventDefault()
     saveItem(event.target, "geburtstage", "geburtstage.html")
 }
-
-
-
-
 
 function savenotizen(event) {
 	event.preventDefault()
     saveItem(event.target, "notizen", "notizen.html")
 }
 
-
-
-
-
 function savetermin(event) {
 	event.preventDefault()
     saveItem(event.target, "termine", "termine.html")
 }
-
-
-
-
 
 async function saveItem(formElement, category, redirect) {
     var data = collectFormData(formElement)

@@ -13,9 +13,7 @@ form {
 
 form#signin {
     height: 22vh;
-    
 }
-
 
 div#ovDiv{
     width: 96vw;
@@ -30,7 +28,6 @@ form.new {
 form.overview {
     height: 47vh;
     width: 45vw;
-    
 }
 
 form#ovGeburtstag{
@@ -74,7 +71,6 @@ form button {
     transition: all 200ms;
     margin-top: 1.5em;
     border: none;
-    
 }
 
 form button:hover {
@@ -113,8 +109,7 @@ form.new button {
     padding: 0;
     box-shadow: none;
     width: 20vw;
-    
-    }
+}
 
     form label{
         font-size: 1.25em;
@@ -143,21 +138,20 @@ form.new button {
         form.overview {
             height: 43vh;
             width: 43vw;
-            
         }
 
-        
         div#ovDiv{
             width: 93.5vw;
             margin: auto;
-}
-    .textarea{
-        width: 100%;
-    }
+        }
+
+        .textarea{
+            width: 100%;
+        }
 
         form#notes{
-        height: 50vh;
-        width: 60vw;
+            height: 50vh;
+            width: 60vw;
         }
 
         form.new{
@@ -167,23 +161,22 @@ form.new button {
 
     @media screen and (max-width: 840px) {
 
-      form{
-          width: 100vw;
-    
-      }
+        form{
+            width: 100vw;
+        }
 
-      form.new{
-          padding: 2rem 0;
-          min-height: 80vh;
-          width: 100vw;
-          height: auto;
-          border-radius: 0px;
-          margin-top: 0;
-      }
+        form.new{
+            padding: 2rem 0;
+            min-height: 80vh;
+            width: 100vw;
+            height: auto;
+            border-radius: 0px;
+            margin-top: 0;
+        }
 
-      form#notes.new{
-          width: 100%;
-      }
+        form#notes.new{
+            width: 100%;
+        }
 
         form#register{
             height: 70.2vh;
@@ -192,12 +185,10 @@ form.new button {
             border-radius: 0%;
             font-size: 1.25em;
             margin-top: 0;
-            
         }
 
         form#register input{
             width: 70%;
-    
         }
 
         form#register input:first-child {
@@ -205,7 +196,6 @@ form.new button {
         }
 
         form#signin {
-
             font-size: 1.25em;
             color: #021C31;
             padding: 0;
@@ -214,8 +204,6 @@ form.new button {
             height: auto;
             border-radius: 0;  
             width: 100%;
-         
-           
         }
         
         form#signin input:first-child {
@@ -233,22 +221,18 @@ form.new button {
             flex-direction: column;
         }
 
-    
         form.overview{
             width: 100vw;
             margin-top: 0;
             border-radius: 0px;
             padding: 1rem 0; 
             height: 45vh;
-            font-size: 1em;
-            
+            font-size: 1em;  
         }
 
         form#ovTermin, form#ovGeburtstag{
             margin: 0 0 0.25em 0;
         }
-
-     
 
         form.overview input{
             font-size: 0.8em;
@@ -271,8 +255,6 @@ form.new button {
         #password_forget{
             width: 60vw;
         }
-
-        
     }
 
     @media screen and (max-width: 600px){
@@ -290,6 +272,4 @@ form.new button {
         form.overview input{
             font-size: 0.8em;
             }
-        
-        
     }

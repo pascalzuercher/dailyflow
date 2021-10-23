@@ -9,12 +9,12 @@ html, body {
     background-color: #021C31;
     overflow: auto;
     text-decoration: none;  
-    
 }
 
 html {
     box-sizing: border-box;
 }
+
 *, *:before, *:after {
     box-sizing: inherit;
 }
@@ -38,7 +38,6 @@ a, img, .signin, .button, div.item, button.löschen, button.bearbeiten, button.b
     top: 89vh;
     right: 6em;
     position: fixed;
-    
 }
 
 div.content{
@@ -96,11 +95,6 @@ button.bearbeiten:hover, button.löschen:hover, .button:hover{
     transform: scale(1.05);
 }
 
-
-
-
-/* ----- HEADER ----- */
-
 header {
     width: 100%;
     display: flex;
@@ -116,20 +110,16 @@ header {
 .logo img {
     height: 4.5em;
     margin: auto;
-
 }
 
 .logo img:hover {
     transform: scale(1.05);
 }
 
-/* ----- Navigation ----- */
-
 nav {
     width: 80%;
     margin-left: 0;
     margin-right: 0;
-    
 }
 
 nav a {
@@ -142,7 +132,6 @@ nav a {
     color: #021C31;
     padding: 0.5em 0.5em;
     border-radius: 5px;
-
 }
 
 nav a:hover{
@@ -160,8 +149,6 @@ nav a:first-child{
 
 #main-nav {text-align: left; display: block;}
 
-/* ----- BODY ----- */
-
 .registertitle {
     margin: 12vh auto 0 auto; 
     text-align: center;
@@ -173,7 +160,6 @@ nav a:first-child{
     background-color: #FFFFFF;
     border-radius: 10px;
     box-shadow: 0px 12px 10px -5px rgba(0,0,0,0.71);  
-    
 }
 
 .slogan {
@@ -244,7 +230,7 @@ nav a:first-child{
 	font-weight: 300;
 	border-radius: 15px;
 	box-shadow: 0px 12px 10px -5px rgba(0,0,0,0.71); 
-	}
+}
 
 
 .burger div {
@@ -253,25 +239,23 @@ nav a:first-child{
     background-color: black;
     margin: 5px;
     transition: all 0.3s ease;
-    }
+}
 
 .burger{
     margin-right: 1em;
     margin-top: 2vh; 
     display: none;
-    }
+}
  
-   
 @media screen and (min-width: 1440px) {
-
 
     button.account{
         top: 82vh;
-        }
+    }
 
     button.account#delete_account{
         top: 73vh;
-        }   
+    }   
 
     .button{
         right: 10em;
@@ -280,7 +264,6 @@ nav a:first-child{
     nav a:first-child{
         margin-left: 15vw;
     }
-
 }
 
 @media screen and (max-width: 1180px) {
@@ -289,16 +272,15 @@ nav a:first-child{
         top: 85vh;
     }
     
-
     button.account{
         width: 14vw;
         height: 6.5vh;
         font-size: 0.25em;
         top: 82vh;
-        }
+    }
 
     button.account#delete_account{
-    top: 73vh;
+        top: 73vh;
     }
 
     nav a{
@@ -307,8 +289,8 @@ nav a:first-child{
         margin-top: 0.8em;
         margin-left: 0.75em;
         color: #021C31;
-        
-        }
+    
+    }
 
     nav a:first-child{
       margin-left: 13.5vw;
@@ -318,7 +300,6 @@ nav a:first-child{
         margin-left: 15vw;
     }
     
-
     .logo img{
         height: 3em;
         margin-top: 0.4em;
@@ -338,9 +319,6 @@ nav a:first-child{
     }
 }
 
-
-
-
 @media screen and (max-width: 840px) {
 
     .button{
@@ -355,7 +333,6 @@ nav a:first-child{
     .logo img{
         width: auto;
         margin: 0 1em;
-      
     }
 
     header{
@@ -366,27 +343,23 @@ nav a:first-child{
         display: block;
     }
     
-   
-
     nav a:first-child{
         margin-left: 0.75em;
         margin-top: 3em;
-        
     }
 
     nav a:last-child{
         margin-bottom: 1em;
     }
 
-
     .title{
         width: 100%;
         border-radius: 0%;
         font-size: 1.25em;
         margin-top: 8vh;
-      }
+    }
 
-      .content_div{
+    .content_div{
         width: 100vw;
         padding: 1.25rem;
         border-radius: 0%;
@@ -404,8 +377,6 @@ nav a:first-child{
        color: white;
        padding: 2rem 0rem;
        margin-top: 8vh;
-    
-
    }
 
    .myLinks{
@@ -420,7 +391,6 @@ nav a:first-child{
        width: 60%;
        transform: translateX(100%);
        transition: transform 0.5s ease-in;
-       
    }
 
    div.myLinks a{
@@ -462,8 +432,6 @@ nav a:first-child{
        top: 62.5vh;
    }
 
-
-
    .bearbeiten{
         width: 2em;
         height: 2em;
@@ -488,15 +456,11 @@ nav a:first-child{
     .button{
         top: 75vh;
     }
-    
 }
-
-
 
 .nav-active{
     transform: translateX(0%);
 }
-
 
 @keyframes navLinkFade{
     from{
@@ -512,9 +476,11 @@ nav a:first-child{
 .toggle .line1{
     transform: rotate(-45deg) translate(-5px,6px);
 }
+
 .toggle .line2{
     opacity: 0;
 }
+
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
 }

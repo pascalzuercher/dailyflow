@@ -1,5 +1,3 @@
-
-
 var category = {
     termin: "termine",
     geburtstag: "geburtstage",
@@ -18,6 +16,7 @@ async function edit(type, id) {
         document.querySelector('input[name="datetime"]').value = item.datetime
         document.querySelector('input[name="description"]').value = item.description
     }
+
     if(type === "geburtstag"){
     document.querySelector('input[name="surname"]').value = item.surname
     document.querySelector('input[name="firstname"]').value = item.firstname
@@ -34,8 +33,6 @@ async function remove(type, id) {
     await postDataWithToken("deleteItem", {path: window.datastore.user+"/"+category[type]+"/"+id})
     location.reload()
 }
-
-
 
 async function deleteAccount(){
         if(window.confirm("Willst du dein Konto wirklich löschen? - Deine Daten werden dabei endgültig gelöscht und können nicht wiederhergestellt werden")){

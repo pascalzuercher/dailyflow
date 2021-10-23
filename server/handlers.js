@@ -3,17 +3,11 @@ const {respondWithJson} = require("./responders")
 const {load, save, doesItemExist, remove} = require("./datastore");
 const bcrypt = require('bcryptjs');
 
-
-
-
 async function createToken (user) {
 	const token = String(Math.round(Math.random() * 1e15))
 	await save(`${user}/token.json`, {token, date: Date.now()})
 	return token
 }
-
-
-
 
 async function signUp(req, res) {
 	const {nachname, vorname, user, email, pw} = await parseJsonBody(req)
@@ -32,11 +26,7 @@ async function signUp(req, res) {
 	await save(`${user}/userdata.json`, {user, hash, email, nachname, vorname})
 	const token = await createToken(user)
 	respondWithJson(res, {ok: true, data: {user, email, vorname, nachname, token}})
-
 }
-
-
-
 
 async function signIn(req, res) {
 	const {user, pw} = await parseJsonBody(req)
@@ -62,26 +52,17 @@ async function saveData(req, res) {
 	respondWithJson(res, {ok: true})
 }
 
-
-
-
 async function loadData(req, res) {
 	const {path, user, token} = await parseJsonBody(req)
 	if(!await verifyToken(user, token)) 	return respondWithJson(res, {ok: false, info: "TokenMismatch"})
 	respondWithJson(res, await load(path))
 }
 
-
-
-
 async function deleteItem(req, res) {
 	const {path, user, token} = await parseJsonBody(req)
 	if(!await verifyToken(user,token)) 	return respondWithJson(res, {ok: false, info: "TokenMismatch"})
 	respondWithJson(res, await remove(path))
 }
-
-
-
 
 async function loadAll(req, res) {
 	const {path, user, token} = await parseJsonBody(req)

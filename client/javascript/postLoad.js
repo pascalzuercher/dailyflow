@@ -2,7 +2,6 @@ function postLoad() {
     showDate()
     displayItems()
     displayUserdata()
-
 }
 
 function showDate() {
@@ -60,10 +59,8 @@ async function checkAutoRemove(category, item) {
     console.log(category);
     if(diff > 2629800000 ){
         await postDataWithToken("deleteItem", {path: window.datastore.user+"/"+category+"/"+id})
-        
     } 
 }
-
 
 function displayUserdata(){
     var userElement = document.querySelector(".displayUserdata")
@@ -76,9 +73,7 @@ function displayUserdata(){
         <div class="item user"><b>${"E-Mail"}</b><br>${email}</div>
         `
     }
-
 }
-
 
 function displayItem(item, category) {
 
@@ -107,22 +102,4 @@ function displayItem(item, category) {
             <button class="löschen" onclick="remove('notiz', '${item.id}')"></button>
         </div>`
     }
-
-
-   
-   
-    
-
-   
-
-
-
-
-
-
-
-
-
-
-    //todo: geburtstage, notizen
 }

@@ -26,7 +26,6 @@ div.item.geburtstag, div.item.termin, div.item.notiz{
   margin-right: 1vw;  
 }
 
-
 .user_div{
   font-size: 0.65em;
 }
@@ -36,7 +35,6 @@ div.item.geburtstag, div.item.termin, div.item.notiz{
   height: 1em;
   margin: 0 1em 0 1em;
 }
-
 
 @media screen and (max-width: 840px) {
   
@@ -55,7 +53,5 @@ div.item.geburtstag, div.item.termin, div.item.notiz{
   width: 1em;
   height: 1em;
 }
-
-
 
 }

@@ -1,8 +1,6 @@
 const fs = require('fs').promises
 const {existsSync} = require('fs')
 const path = require('path')
-
-
 const basepath = path.join(__dirname, "data")
 
 async function createDirIfNotExists(dirname) {
