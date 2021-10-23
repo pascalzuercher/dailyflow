@@ -6,10 +6,8 @@ var category = {
 }
 
 async function edit(type, id) {
-    console.log(id);
     await load(`neuer_${type}.html`)
     var item = await postDataWithToken("loadData", {path: window.datastore.user+"/"+category[type]+"/"+id})
-    console.log(item);
     document.querySelector('input[name="id"]').value = id
     if(type === "termin"){
         document.querySelector('input[name="title"]').value = item.title
@@ -29,7 +27,6 @@ async function edit(type, id) {
 }
 
 async function remove(type, id) {
-    console.log(id);
     await postDataWithToken("deleteItem", {path: window.datastore.user+"/"+category[type]+"/"+id})
     location.reload()
 }

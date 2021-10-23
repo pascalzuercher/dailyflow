@@ -90,8 +90,6 @@ function displayItem(item, category) {
         ${beautifyDate(item.datetime)} - <b>${item.firstname} ${item.surname}</b><img src="img/confetti.png" class="candle">
            <br><button onclick="edit('geburtstag', '${item.id}')" class="bearbeiten"></button>
            <button class="löschen" onclick="remove('geburtstag', '${item.id}')"></button>
-           
-           
         </div>`
     }
 

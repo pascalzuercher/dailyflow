@@ -9,7 +9,6 @@ async function postDataWithToken (url, data) {
 }
 
 async function postData(url, data) {
-	console.log(data);
 	const response = await fetch(BASEURL + url, {
 		method: 'POST',
 		mode: 'cors',
@@ -31,7 +30,6 @@ function collectFormData(formElement) {
 }
 
 function checkFormResponse(response) {
-	console.log(response);
 	if(response.ok) {
 		Object.assign(window.datastore, response.data)
 		localStorage.dailyflowdata = JSON.stringify(window.datastore)
@@ -39,15 +37,10 @@ function checkFormResponse(response) {
 
 	}
 	else {
-		console.log(response);
 		if(response.info == "TokenMismatch") logout()
 		return false
 	}
 }
-
-
-
-
 
 function beautifyDate(datetime) {
 	var date = new Date(datetime)

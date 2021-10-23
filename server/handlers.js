@@ -34,7 +34,6 @@ async function signIn(req, res) {
 	const {email, vorname, nachname, hash} = userdata
 	saltedpassword = pw  + "jgf75rg67d54dh5zrfuztg6rdtw4sv4t5dhfntuzho9kkhunutfg65df6";
 	const passwordsMatch = await bcrypt.compare(saltedpassword, hash)
-	console.log({ok: passwordsMatch, data: {email, user, vorname, nachname}});
 	const token = await createToken(user)
 	respondWithJson(res, {ok: passwordsMatch, data: {email, user, vorname, nachname, token}})
 }
